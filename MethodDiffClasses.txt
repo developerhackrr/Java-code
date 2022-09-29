@@ -1,0 +1,3 @@
+# Develop a Program to define a method with same signature in different classes
+as both static and non-static method.call and execute those methods from other
+class main method.

@@ -1,0 +1,23 @@
+ClassLoader working functionality:
+    -Classloader loads classes into JVM based on classpath Enviroment variable setup.
+    -To load class bytes into JVM, Classloader searches in the folders those are configured 
+     in classpath enviroment variable.it searches all folders till it finds given class's".class
+     file".if it not foundin any one of the folder then it throws "ClassnotFoundException" or
+     "NoClassDefFoundError" exception.
+     -if classpath is not at all created, it loads classes only from current working directory.
+     -if classpath is created it is mandatory to place "." operator to load classes from current 
+      working directory.
+     -if the classpath enviroment variable has the character ";" not as a separator, it is
+      treated as "." so that ClassLoader loads classes from current working directory.
+      
+Find out from which folder class is loaded and executed from the below syntax:
+    -set classpath=C:\test                  <=class is loaded from C:\test
+    -set classpath=.                        <=class is loaded from current working directory
+    -set classpath=;                        <=class is loaded from current working directory
+    -set classpath=.;C\test                 <=class is loaded from current working directory
+    -set classpath=C:\test;                 <=class is loaded from C:\test
+    -set classpath=Hariom;C:\test           <=class is loaded from C:\test
+    -set classpath=Hariom;;C:\test          <=class is loaded from current working directory
+    -set classpath=Hariom;C:\test;          <=class is loaded from C:\test
+    -set classpath=Hariom                   <=JVM throws "java.lang.NoclassDefFoundError"
+    -set classpath=Hariom;                  <=class is loaded from current working directory

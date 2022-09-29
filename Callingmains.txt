@@ -1,0 +1,10 @@
+if we find class name for variable creation or for parameter
+creation, what is the value we must store and pass?
+- we must store or pass that class object
+- we must create object of a class by using new keyword
+
+for example:
+    A a1 = new A();
+    B b1 = new B();
+    Student s1 = new Student();
+    Employee e1 = new Employee();
